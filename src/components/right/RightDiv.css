@@ -1,0 +1,8 @@
+.right {
+    width: 30%;
+    border: 0.1px solid #d2e8ff;
+    margin: 10px 20px;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}

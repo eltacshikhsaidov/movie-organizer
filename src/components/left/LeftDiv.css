@@ -1,0 +1,112 @@
+.left {
+    width: 60%;
+    height: auto;
+    border: 0.1px solid #d2e8ff;
+    padding: 10px;
+    margin: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.search-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-group form {
+    display: flex;
+    justify-content: center;
+}
+
+/*  search bar design */
+.search-bar {
+    -webkit-appearance: none !important;
+    background-clip: padding-box;
+    background-color: white;
+    vertical-align: middle;
+    border-radius: 0.25rem;
+    border: 1px solid #e0e0e5;
+    font-size: 1rem;
+    width: 100%;
+    line-height: 2;
+    padding: 0.375rem 1.25rem;
+    -webkit-transition: border-color 0.2s;
+    -moz-transition: border-color 0.2s;
+    transition: border-color 0.2s;
+}
+
+.search-bar:focus {
+    transition: all 0.5s;
+    box-shadow: 0 0 40px #89CFF0;
+    border-color: #318CE7;
+    outline: none;
+}
+
+/* search button design */
+.search-submit {
+    height: 51px;
+    margin: 0;
+    padding: 1rem 1.3rem;
+    border-radius: 0.25rem;
+    font-family: "Font Awesome 5 Free";
+    font-size: 1rem;
+}
+
+.button {
+    display: inline-block;
+    font-weight: bolder;
+    font-size: 0.8rem;
+    line-height: 1.15;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    background: #0CAFFF;
+    color: white;
+    border: 1px solid transparent;
+    vertical-align: middle;
+    text-shadow: none;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.button:hover,
+.button:active,
+.button:focus {
+    cursor: pointer;
+    background: #007FFF;
+    color: #d6d6d6;
+    outline: 0;
+}
+
+/* Movie card design */
+
+.movie-list {
+    border: 0.1px solid #d2e8ff;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0px;
+}
+
+.movie-card {
+    border: 0.1px solid #d2e8ff;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+.movie-card-image img {
+    width: 250px;
+    height: 200px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.movie-card:hover {
+    background-color: #d2e8ff;
+    transition: 0.2s;
+    cursor: pointer;
+}
