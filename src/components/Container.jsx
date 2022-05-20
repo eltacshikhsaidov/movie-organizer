@@ -5,8 +5,8 @@ import RightDiv from './right/RightDiv';
 const Container = () => {
   return (
     <div className='container'>
-        <LeftDiv />
-        <RightDiv />
+      <LeftDiv />
+      <RightDiv />
     </div>
   )
 }

@@ -1,11 +1,13 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Swal from 'sweetalert2';
 import { addToList } from '../../redux/actions/listActions';
 
 const MovieCard = ({movie}) => {
 
     const dispatch = useDispatch();
+    const allMovies = useSelector(state => state.list);
+    const movies = [...allMovies.movies];
 
     const showAlert = () => {
         const Toast = Swal.mixin({
@@ -26,9 +28,34 @@ const MovieCard = ({movie}) => {
         });
     }
 
+    const showAlertInfo = () => {
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 1700,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        });
+
+        Toast.fire({
+            icon: 'info',
+            title: 'Movie already in your list'
+        });
+    }
+
     const handleAddMovie = (movie) => {
-        showAlert();
-        // console.log('Movie with id ' + movie + ' added to your list');
+
+        const isInCart = movies.find(item => item.movie.imdbID === movie.movie.imdbID);
+        // console.log(isInCart !== undefined);
+
+        isInCart !== undefined ? showAlertInfo() : showAlert();
+
+        // showAlert();
+        // console.log('Movie with id ' + movie.movie.imdbID + ' added to your list');
         dispatch(addToList(movie));
     }
 

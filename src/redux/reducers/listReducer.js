@@ -7,10 +7,15 @@ const initialState = {
 const listReducer = (state = initialState, action) => {
     switch (action.type) {
         case actionTypes.ADD_TO_LIST:
-            return {
+
+            const isInCart = state.movies.find(movie => movie.movie.imdbID === action.payload.movie.imdbID);
+
+            // check if the same movie is already added to list or not
+            return isInCart ? state : {
                 ...state,
                 movies: [...state.movies, action.payload]
-            };
+            }
+
         case actionTypes.REMOVE_FROM_LIST:
             return {
                 ...state,

@@ -32,11 +32,10 @@ const LeftDiv = () => {
 
                 <form onSubmit={submitHandler}>
                     <input onChange={changeHandler} type='text' placeholder='Search movie by its title' className='search-bar' />
-                    {/* <input type="submit" className="search-submit button" value="Search" onClick={submitHandler} /> */}
                 </form>
 
                 <div className='movie-list'>
-                    {movieData === undefined ? <p>No movie available</p> : movieData.map((movie) => {
+                    {movieData === undefined ? <p>Type keywords in order to search movies</p> : movieData.map((movie) => {
                             return (
                                 <div key={movie.imdbID}>
                                     <MovieCard 

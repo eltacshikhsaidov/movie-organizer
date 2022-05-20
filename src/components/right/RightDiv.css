@@ -1,6 +1,6 @@
 .right {
     width: 30%;
-    border: 0.1px solid #d2e8ff;
+    /* border: 0.1px solid #d2e8ff; */
     margin: 10px 20px;
     border-radius: 5px;
     padding: 10px;
@@ -15,6 +15,16 @@
     border-radius: 5px;
     justify-content: space-evenly;
     margin: 5px;
+}
+
+.movie-card-in-list:hover {
+    background-color: #d2e8ff;
+    transition: 0.2s;
+    /* cursor: pointer; */
+}
+
+.border-none {
+    border: none;
 }
 
 /* button design */
@@ -65,4 +75,19 @@
 
 .card-title {
     font-size: 0.6rem;
+}
+
+.list-name-bar {
+    width: auto;
+}
+
+.list-button {
+    text-decoration: none;
+    padding: 1rem 1.3rem;
+    border-radius: 0.4rem;
+    margin-top: 1rem;
+}
+
+.margin-top {
+    margin-top: 1rem;
 }
