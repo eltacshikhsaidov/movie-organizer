@@ -9,12 +9,12 @@ const listReducer = (state = initialState, action) => {
         case actionTypes.ADD_TO_LIST:
             return {
                 ...state,
-                movies: [...state.movies, action.payload.id]
+                movies: [...state.movies, action.payload]
             };
         case actionTypes.REMOVE_FROM_LIST:
             return {
                 ...state,
-                movies: [...state.movies, action.payload.id]
+                movies: [...state.movies.filter(movie => movie.movie !== action.payload)]
             };
         default:
             return state;
@@ -22,3 +22,5 @@ const listReducer = (state = initialState, action) => {
 }
 
 export default listReducer;
+
+// remove from list ...state.movies.filter(movie => movie.imdbID !== action.payload.id)

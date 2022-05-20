@@ -37,18 +37,15 @@ const LeftDiv = () => {
 
                 <div className='movie-list'>
                     {movieData === undefined ? <p>No movie available</p> : movieData.map((movie) => {
-                        return (
-                            <div key={movie.imdbID}>
-                                <MovieCard 
-                                    title={movie.Title}
-                                    poster={movie.Poster}
-                                    year={movie.Year}
-                                    imdbID={movie.imdbID}
-                                />
-                            </div>
-                        );
+                            return (
+                                <div key={movie.imdbID}>
+                                    <MovieCard 
+                                        movie={movie}
+                                    />
+                                </div>
+                            );
+                        })
                     }
-                    )}
                 </div>
 
             </div>
