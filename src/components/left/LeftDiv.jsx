@@ -30,6 +30,10 @@ const LeftDiv = () => {
         <div className='left'>
             <div className='search-group'>
 
+                <div className="fixed-button">
+                    <a href='#down' title='got to the list section'>&#8595;</a>
+                </div>
+
                 <form onSubmit={submitHandler}>
                     <input onChange={changeHandler} type='text' placeholder='Search movie by its title' className='search-bar' />
                 </form>

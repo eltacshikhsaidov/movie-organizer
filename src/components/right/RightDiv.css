@@ -91,3 +91,10 @@
 .margin-top {
     margin-top: 1rem;
 }
+
+@media screen and (max-width: 600px) {
+    .right {
+        border-top: 0.1px solid #d2e8ff;
+        width: 100%;
+    }
+}

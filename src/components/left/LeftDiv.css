@@ -110,3 +110,55 @@
     transition: 0.2s;
     cursor: pointer;
 }
+
+.fixed-button {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .movie-card {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .movie-card-image img {
+        width: 45vw;
+        height: 60vw;
+    }
+
+    .fixed-button {
+        display: block;
+        position: fixed;
+        top: 145px;
+        right: 25px;
+    }
+
+    .fixed-button a {
+        color: #fff;
+        background: #0CAFFF;
+        padding: 0px 10px;
+        border-radius: 50%;
+        text-decoration: none;
+        font-size: 2rem;
+        font-weight: bolder;
+        line-height: 1.15;
+        letter-spacing: 0.1rem;
+        text-transform: uppercase;
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        transition: all 0.2s;
+    }
+
+    .fixed-button a:hover {
+        background: #007FFF;
+        color: #d6d6d6;
+        outline: 0;
+        cursor: pointer;
+    }
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
