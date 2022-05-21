@@ -52,12 +52,13 @@ const MovieList = () => {
                                     <h2>{movie.movie.Title}</h2>
                                     <button className='remove' onClick={() => handleRemove(movie.movie)}>X</button>
                                 </div>
-                                <p>
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis quod minus reprehenderit commodi nisi tempora quia autem aperiam dolore. Impedit maiores quo nobis eius nemo necessitatibus architecto, ad aliquam modi!
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita dicta, quaerat, nisi sed voluptates quae sapiente delectus natus veniam quisquam commodi ipsa magnam iure voluptatum autem? Repellendus, necessitatibus voluptatum? Labore?
-                                </p>
-                                <p>Year: {movie.movie.Year}</p>
+
+                                <div className='bottom-group'>
+                                    <p>Year: {movie.movie.Year}</p>
+                                    <a className='link' target='_blank' href={`https://www.imdb.com/title/${movie.movie.imdbID}/`}>open</a>
+                                </div>
                             </div>
+
                         </div>
                     );
                 })}
