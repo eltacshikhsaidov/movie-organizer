@@ -55,7 +55,7 @@ const MovieList = () => {
 
                                 <div className='bottom-group'>
                                     <p>Year: {movie.movie.Year}</p>
-                                    <a className='link' target='_blank' href={`https://www.imdb.com/title/${movie.movie.imdbID}/`}>open</a>
+                                    <a className='link' rel='noreferrer' target='_blank' href={`https://www.imdb.com/title/${movie.movie.imdbID}/`}>open</a>
                                 </div>
                             </div>
 
