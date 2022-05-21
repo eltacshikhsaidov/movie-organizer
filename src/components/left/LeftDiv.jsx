@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import MovieCard from '../moviecard/MovieCard';
 import './LeftDiv.css';
 
@@ -26,12 +27,15 @@ const LeftDiv = () => {
         getData();
     });
 
+    const moviesObject = useSelector(state => state.list);
+    const movieArray = [...moviesObject.movies];
+
     return (
         <div className='left'>
             <div className='search-group'>
 
                 <div className="fixed-button">
-                    <a href='#down' title='got to the list section'>&#8595;</a>
+                    {movieArray.length > 0 && <a href='#down' title='got to the list section'>&#8595;</a>}
                 </div>
 
                 <form onSubmit={submitHandler}>
@@ -40,14 +44,14 @@ const LeftDiv = () => {
 
                 <div className='movie-list'>
                     {movieData === undefined ? <p>Type keywords in order to search movies</p> : movieData.map((movie) => {
-                            return (
-                                <div key={movie.imdbID}>
-                                    <MovieCard 
-                                        movie={movie}
-                                    />
-                                </div>
-                            );
-                        })
+                        return (
+                            <div key={movie.imdbID}>
+                                <MovieCard
+                                    movie={movie}
+                                />
+                            </div>
+                        );
+                    })
                     }
                 </div>
 
