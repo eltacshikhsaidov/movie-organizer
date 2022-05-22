@@ -17,11 +17,7 @@ html {
 }
 
 /* changing scroll bar color */
-::-webkit-scrollbar-track {
+::-webkit-scrollbar {
   width: 10px;
   background-color: #d2e8ff;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #007FFF;
 }
