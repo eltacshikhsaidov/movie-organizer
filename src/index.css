@@ -15,3 +15,13 @@ code {
 html {
   scrollbar-color: #007FFF #d2e8ff;
 }
+
+/* changing scroll bar color */
+::-webkit-scrollbar-track {
+  width: 10px;
+  background-color: #d2e8ff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #007FFF;
+}
