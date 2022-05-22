@@ -12,10 +12,6 @@ code {
     monospace;
 }
 
-html {
-  scrollbar-color: #007FFF #d2e8ff;
-}
-
 /* changing scroll bar color */
 ::-webkit-scrollbar {
   width: 10px;
