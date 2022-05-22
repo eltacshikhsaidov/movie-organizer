@@ -11,4 +11,16 @@
 - Open specific movie from new tab
 
 # View of website
+<img src='https://github.com/eltacshikhsaidov/movie-organizer/blob/master/src/gif/MustSee.gif?raw=true' alt='gif' />
+
+# Technologies
+- React JS (react-router-dom, react-redux, etc)
+- Sweetalert2
+- Redux
+- HTML
+- CSS
+
+# Thank you for your attention!
+
+
 
