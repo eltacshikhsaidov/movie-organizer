@@ -18,6 +18,6 @@ code {
   background-color: #d2e8ff;
 }
 
-::-webkit-scrollbar-button {
+::-webkit-scrollbar-thumb {
   background-color: #007FFF;
 }
